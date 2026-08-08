@@ -1109,8 +1109,8 @@ function sys_lmde_add_apt_sources () {
 
 	echo "==== sys_lmde_add_apt_sources ===="
 
-	local target_lmde_codename="\${TARGET_LINUXMINT_CODENAME}"
-	local target_lmde_mirror="\${TARGET_LINUXMINT_MIRROR}"
+	local target_lmde_codename="\${TARGET_LMDE_CODENAME}"
+	local target_lmde_mirror="\${TARGET_LMDE_MIRROR}"
 	local target_arch="\${TARGET_ARCH}"
 
 	mkdir -p "/etc/apt/sources.list.d"
