@@ -1,6 +1,6 @@
 
 
-# debian-live-custom-template
+# lmde-live-custom-template
 
 
 
@@ -9,7 +9,7 @@
 
 | Link | GitHub |
 | ---- | ------ |
-| [debian-live-custom-template](https://samwhelp.github.io/debian-live-custom-template/) | [GitHub](https://github.com/samwhelp/debian-live-custom-template) |
+| [lmde-live-custom-template](https://samwhelp.github.io/lmde-live-custom-template/) | [GitHub](https://github.com/samwhelp/lmde-live-custom-template) |
 
 
 
@@ -27,9 +27,9 @@
 
 | Respin |
 | ------ |
-| [debian-live-custom-respin-base](https://github.com/samwhelp/debian-live-custom-respin-base) |
-| [debian-live-custom-respin-xfce](https://github.com/samwhelp/debian-live-custom-respin-xfce) |
-| [debian-live-custom-respin-kde-plasma](https://github.com/samwhelp/debian-live-custom-respin-kde-plasma) |
+| [lmde-live-custom-respin-base](https://github.com/samwhelp/lmde-live-custom-respin-base) |
+| [lmde-live-custom-respin-xfce](https://github.com/samwhelp/lmde-live-custom-respin-xfce) |
+| [lmde-live-custom-respin-kde-plasma](https://github.com/samwhelp/lmde-live-custom-respin-kde-plasma) |
 
 
 
@@ -62,8 +62,8 @@ sudo passwd -d $(whoami)
 
 | Link | GitHub |
 | ---- | ------ |
-| [debian-iso-builder-template](https://samwhelp.github.io/debian-iso-builder-template/) | [GitHub](https://github.com/samwhelp/debian-iso-builder-template) |
-| [Debian Adjustment](https://samwhelp.github.io/debian-adjustment/) | [GitHub](https://github.com/samwhelp/debian-adjustment) |
+| [lmde-iso-builder-template](https://samwhelp.github.io/lmde-iso-builder-template/) | [GitHub](https://github.com/samwhelp/lmde-iso-builder-template) |
+| [Lmde Adjustment](https://samwhelp.github.io/lmde-adjustment/) | [GitHub](https://github.com/samwhelp/lmde-adjustment) |
 
 
 
