@@ -1053,6 +1053,94 @@ __EOF__
 
 
 ##
+## ## Module / Apt Sources / Lmde
+##
+
+##
+## * https://github.com/clefebvre/docker-images
+## * https://github.com/clefebvre/docker-images/blob/master/mint23-amd64.Dockerfile
+## * https://github.com/clefebvre/docker-images/tree/master/mint23/etc/apt
+##
+
+function core_apt_sources_config_for_lmde () {
+
+	echo "################################################################################"
+	echo "## [Worker] core_apt_sources_config_for_lmde"
+	echo "################################################################################"
+
+	echo "==== config apt soruces list for lmde ===="
+
+	sys_lmde_add_keyring
+
+	sys_lmde_add_apt_sources
+
+	sys_lmde_add_apt_preferences
+
+}
+
+function sys_lmde_add_keyring () {
+
+	echo "==== sys_lmde_add_keyring ===="
+
+	local keyring_deb_file_name="linuxmint-keyring_2022.06.21_all.deb"
+
+	echo 'apt-get install -y --install-recommends gnupg wget'
+	apt-get install -y --install-recommends gnupg wget
+
+	mkdir -p "/tmp"
+	echo "wget -c http://packages.linuxmint.com/pool/main/l/linuxmint-keyring/\${keyring_deb_file_name} -O /tmp/\${keyring_deb_file_name}"
+	wget -c "http://packages.linuxmint.com/pool/main/l/linuxmint-keyring/\${keyring_deb_file_name}" -O "/tmp/\${keyring_deb_file_name}"
+
+	echo "dpkg -i /tmp/\${keyring_deb_file_name}"
+	dpkg -i "/tmp/\${keyring_deb_file_name}"
+
+	rm -f "/tmp/\${keyring_deb_file_name}"
+
+}
+
+function sys_lmde_add_apt_sources () {
+
+	echo "==== sys_lmde_add_apt_sources ===="
+
+	local target_lmde_codename="\${TARGET_LINUXMINT_CODENAME}"
+	local target_lmde_mirror="\${TARGET_LINUXMINT_MIRROR}"
+	local target_arch="\${TARGET_ARCH}"
+
+	mkdir -p "/etc/apt/sources.list.d"
+
+cat << __EOF__ | tee "/etc/apt/sources.list.d/lmde.sources"
+Types: deb
+URIs: \${target_lmde_mirror}
+Suites: \${target_lmde_codename}
+Components: main upstream import backport
+Architectures: \${target_arch}
+Signed-By: /etc/apt/trusted.gpg.d/linuxmint-keyring.gpg
+__EOF__
+
+
+}
+
+function sys_lmde_add_apt_preferences () {
+
+	echo "==== sys_lmde_add_apt_preferences ===="
+
+	mkdir -p "/etc/apt/preferences.d"
+
+cat << __EOF__ | tee "/etc/apt/preferences.d/lmde.pref"  > /dev/null 2>&1
+Package: *
+Pin: origin live.linuxmint.com
+Pin-Priority: 750
+
+Package: *
+Pin: release o=linuxmint,c=upstream
+Pin-Priority: 700
+__EOF__
+
+
+}
+
+
+##
 ## ## Module / Systemd
 ##
 
@@ -1731,6 +1819,10 @@ function model_do_fulfill_scripts () {
 
 
 	core_apt_sources_config
+	core_apt_upgrade
+
+
+	core_apt_sources_config_for_lmde
 	core_apt_upgrade
 
 
