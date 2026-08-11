@@ -69,7 +69,6 @@ sudo passwd -d $(whoami)
 
 | Link | GitHub |
 | ---- | ------ |
-| [lmde-iso-builder-template](https://samwhelp.github.io/lmde-iso-builder-template/) | [GitHub](https://github.com/samwhelp/lmde-iso-builder-template) |
 | [Lmde Adjustment](https://samwhelp.github.io/lmde-adjustment/) | [GitHub](https://github.com/samwhelp/lmde-adjustment) |
 
 
