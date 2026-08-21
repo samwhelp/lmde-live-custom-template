@@ -40,6 +40,7 @@
 | Respin |
 | ------ |
 | [lmde-live-custom-respin-base](https://github.com/samwhelp/lmde-live-custom-respin-base) |
+| [lmde-live-custom-respin-cinnamon](https://github.com/samwhelp/lmde-live-custom-respin-cinnamon) |
 | [lmde-live-custom-respin-xfce](https://github.com/samwhelp/lmde-live-custom-respin-xfce) |
 | [lmde-live-custom-respin-kde-plasma](https://github.com/samwhelp/lmde-live-custom-respin-kde-plasma) |
 
@@ -75,6 +76,7 @@ sudo passwd -d $(whoami)
 | Link | GitHub |
 | ---- | ------ |
 | [Lmde Adjustment](https://samwhelp.github.io/lmde-adjustment/) | [GitHub](https://github.com/samwhelp/lmde-adjustment) |
+| [LinuxMint Adjustment](https://samwhelp.github.io/linuxmint-adjustment/) | [GitHub](https://github.com/samwhelp/linuxmint-adjustment) |
 
 
 
