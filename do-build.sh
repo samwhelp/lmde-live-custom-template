@@ -1844,6 +1844,7 @@ function model_do_fulfill_scripts () {
 
 	core_apt_sources_config
 	core_apt_sources_config_for_lmde
+	core_apt_update
 	lmde_base_package_install
 	core_apt_upgrade
 
