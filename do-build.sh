@@ -1322,19 +1322,19 @@ function live_debianlive_config_install () {
 	echo "## [Worker] live_debianlive_config_install"
 	echo "################################################################################"
 
-	echo "==== config /etc/live/config.config.d/ ===="
+	echo "==== config /etc/live/config.conf.d/ ===="
 
 	local target_name="\${TARGET_NAME}"
 	local target_business_name="\${TARGET_BUSINESS_NAME}"
 	local target_hostname="\${TARGET_HOSTNAME}"
 
 
-	mkdir -p "/etc/live/config.config.d"
+	mkdir -p "/etc/live/config.conf.d"
 
 
-	echo "==== config /etc/live/config.config.d/hostname.conf ===="
+	echo "==== config /etc/live/config.conf.d/hostname.conf ===="
 
-cat << __EOF__ | tee /etc/live/config.config.d/hostname.conf > /dev/null 2>&1
+cat << __EOF__ | tee /etc/live/config.conf.d/hostname.conf > /dev/null 2>&1
 
 
 ################################################################################
@@ -1366,9 +1366,9 @@ LIVE_HOSTNAME="\${target_hostname}"
 __EOF__
 
 
-	echo "==== config /etc/live/config.config.d/locale.conf ===="
+	echo "==== config /etc/live/config.conf.d/locale.conf ===="
 
-cat << __EOF__ | tee /etc/live/config.config.d/locale.conf > /dev/null 2>&1
+cat << __EOF__ | tee /etc/live/config.conf.d/locale.conf > /dev/null 2>&1
 
 
 ################################################################################
@@ -1403,9 +1403,9 @@ LIVE_TIMEZONE=Asia/Taipei
 __EOF__
 
 
-	echo "==== config /etc/live/config.config.d/user.conf ===="
+	echo "==== config /etc/live/config.conf.d/user.conf ===="
 
-cat << __EOF__ | tee /etc/live/config.config.d/user.conf > /dev/null 2>&1
+cat << __EOF__ | tee /etc/live/config.conf.d/user.conf > /dev/null 2>&1
 
 
 ################################################################################
